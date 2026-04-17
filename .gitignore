@@ -3,4 +3,13 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 *.csv
-results/
+
+# keep folder structure
+!data/
+!data/raw/
+!data/processed/
+!results/
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!results/.gitkeep
