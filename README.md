@@ -98,7 +98,7 @@ Example:
 node_G1	node_G2	similarity
 0	5	0.92
 
-🔬 **Pipeline Overview**
+🔬 ## Pipeline Overview
 Authentic Twitter Single Image
     ↓
 Read base graph G
