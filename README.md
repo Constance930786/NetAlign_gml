@@ -95,28 +95,39 @@ Results are saved to:
 results/experiment_results.csv
 
 Example:
-
 node_G1	node_G2	similarity
 0	5	0.92
-🔬 Pipeline Overview
-Graph G1        Graph G2
-   │               │
-   ▼               ▼
-Node2Vec       Node2Vec
-   │               │
-   ▼               ▼
-Embeddings     Embeddings
-        \       /
-         \     /
-       Similarity Matrix
-              │
-              ▼
-         Alignment
-              │
-              ▼
-         Results CSV
-🧪 Evaluation (Optional Extension)
 
+🔬 **Pipeline Overview**
+Authentic Twitter Single Image
+    ↓
+Read base graph G
+    ↓
+Construct Node Features X
+    ↓
+permutation
+    ↓
+Generate (Gs, Gt, Xs, Xt, gt_map)
+    ↓
+Add Structural Noise / Attribute Noise
+    ↓
+Running the Alignment Method:
+    - Node2Vec + NN
+    - FINAL-style
+    - WAlign-inspired
+    ↓
+Evaluate:
+    - Accuracy@1
+    - Hit@1
+    - Hit@5
+    ↓
+Save CSV
+    ↓
+Draw robustness graph
+    ↓
+draw the conclusion
+
+🧪 Evaluation (Optional Extension)
 You can evaluate alignment performance using:
 
 Accuracy
@@ -124,8 +135,7 @@ Accuracy
 =
 correct matches
 𝑁
-Accuracy=
-N
+Accuracy=N
 correct matches​
 Hits@K
 
